@@ -1,7 +1,7 @@
 # Maintainer: Ernesto Ricart <ernest2193@gmail.com>
 
 pkgname=Plank-Config
-pkgver=1.1
+pkgver=1.1.1
 pkgrel=1
 pkgdesc="A tool to configure Plank Dock"
 arch=('i686' 'x86_64')
@@ -9,16 +9,15 @@ url="https://github.com/ernest21/Plank-Config/"
 license=('GPL')
 depends=('plank' )
 makedepends=('vala')
-md5sums=('340779e9b21f65d21f2da92cdae8c627')
+md5sums=('f4dd8172a093251e4d1f7a586d0dfadc')
 
-source=($pkgname-$pkgver.tar.gz::https://github.com/ernest21/Plank-Config/archive/v1.1.tar.gz)
+source=($pkgname-$pkgver.tar.gz::https://github.com/ernest21/Plank-Config/archive/v1.1.1.tar.gz)
 
 package() {
   cd "$srcdir/$pkgname-$pkgver"
   ./autogen.sh
   make
   make DESTDIR="$pkgdir/" install
-  install -Dm644 {} "$pkgdir/plank-config.desktop /usr/share/applicantions/"
 }
 
 
