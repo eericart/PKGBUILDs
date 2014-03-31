@@ -1,0 +1,42 @@
+# Maintainer: ernest21 <ernest2193 at gmail dot com>
+
+pkgname=super-wingpanel-bzr
+pkgver=183
+pkgrel=1
+pkgdesc='A super sexy space-saving top panel'
+arch=('i686' 'x86_64')
+url="https://code.launchpad.net/~heathbar/wingpanel/super-wingpanel"
+license=('GPL3')
+depends=('granite-bzr' 'libindicator-gtk3' 'libwnck3')
+optdepends=('indicator-datetime: Display date and time'
+            'indicator-pantheon-session-bzr: Pantheon session indicator'
+            'indicator-power: Battery idicator')
+makedepends=('bzr' 'cmake' 'vala')
+provides=("${pkgname%-*}")
+conflicts=("${pkgname%-*}")
+install="${pkgname%-*}.install"
+source=("bzr+lp:/~heathbar/super-wingpanel/stable")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd stable
+  bzr revno
+}
+
+build() {
+  cd stable
+
+  if [[ -d build ]]; then
+    rm -rf build
+  fi
+  mkdir build && cd build
+
+  cmake .. -DCMAKE_BUILD_TYPE='Release' -DCMAKE_INSTALL_PREFIX='/usr' -DGSETTINGS_COMPILE='OFF'
+  make
+}
+
+package() {
+  cd stable/build
+
+  make DESTDIR="${pkgdir}" install
+}
