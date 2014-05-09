@@ -1,6 +1,0 @@
-# Hashes of file build rules.
-0231b962964f715b786fa4133c506fba CMakeFiles/dist
-062b5e1593568ff3a048995013c0b235 po/CMakeFiles/i18n
-062b5e1593568ff3a048995013c0b235 po/CMakeFiles/pot
-9022668eae903b176f1575c99a64eea0 src/WingpanelApp.c
-bb8413f2268d045659587a0a2ab8a7de super-wingpanel_valac.stamp

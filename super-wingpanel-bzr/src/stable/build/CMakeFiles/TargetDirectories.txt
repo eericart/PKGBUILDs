@@ -1,4 +1,0 @@
-/media/ernest/Datos/Dev/PKBUILD/super-wingpanel-bzr/src/stable/build/CMakeFiles/dist.dir
-/media/ernest/Datos/Dev/PKBUILD/super-wingpanel-bzr/src/stable/build/po/CMakeFiles/i18n.dir
-/media/ernest/Datos/Dev/PKBUILD/super-wingpanel-bzr/src/stable/build/po/CMakeFiles/pot.dir
-/media/ernest/Datos/Dev/PKBUILD/super-wingpanel-bzr/src/stable/build/CMakeFiles/super-wingpanel.dir
